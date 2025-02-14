@@ -1,0 +1,38 @@
+[
+    {
+      "nome": "João dos Santos",
+      "admin": false,
+      "idade": 29,
+      "cidade": "Chapecó",
+      "profissao": "Analista",
+      "avatar": "https://images.vexels.com/media/users/3/140748/isolated/svg/5b078a59390bb4666df98b49f1cdedd0.svg"
+    },
+    {
+      "nome": "Maria Oliveira",
+      "admin": true,
+      "idade": 35,
+      "cidade": "São Paulo",
+      "profissao": "Desenvolvedora"
+    },
+    {
+      "nome": "Carlos Lima",
+      "admin": false,
+      "idade": 41,
+      "cidade": "Rio de Janeiro",
+      "profissao": "Gerente"
+    },
+    {
+      "nome": "Ana Souza",
+      "admin": true,
+      "idade": 27,
+      "cidade": "Florianópolis",
+      "profissao": "Designer"
+    },
+    {
+      "nome": "Ana Souza",
+      "admin": true,
+      "idade": 27,
+      "cidade": "Florianópolis",
+      "profissao": "Designer"
+    }
+  ]
