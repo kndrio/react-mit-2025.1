@@ -10,7 +10,9 @@ import Users from "./components/Users";
 import Feedback from "./components/Feedback";
 import Home from "./components/Home";
 
+//MIT 2025.2
 import Data from "./components/Data/Data"
+import UsersAxios from "./components/UsersAxios";
 
 import './App.css'
 
@@ -27,6 +29,7 @@ function App() {
             <Route path="/users" element={<Users/>} />
             <Route path="/feedback" element={<Feedback/>} />
             <Route path="/data" element={<Data/>} />
+            <Route path="/users-axios" element={<UsersAxios/>} />
           </Routes>
         </Container>
         <footer className="bg-dark text-white text-center p-3">

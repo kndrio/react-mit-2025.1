@@ -2,7 +2,7 @@ import {useState, useEffect} from "react";
 
 const useFetch = (url, options) => {
 
-    const [data, setdata] = useState(null);
+    const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
@@ -23,7 +23,7 @@ const useFetch = (url, options) => {
                         throw new Error(errorData.error || `Erro: ${response.status}`);
                     }
                     const data = await response.json();
-                    setdata(data);
+                    setData(data);
                 } catch (err) {
                     if (err.name !== "AbortError"){
                         setError(err.message);
@@ -32,7 +32,8 @@ const useFetch = (url, options) => {
                     setLoading(false)
                 }
             }
-
+            fetchData();
+            return () => controller.abort();
         },[url, options]
     );
 
