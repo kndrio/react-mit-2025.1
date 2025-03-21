@@ -13,6 +13,8 @@ import Home from "./components/Home";
 //MIT 2025.2
 import Data from "./components/Data/Data"
 import UsersAxios from "./components/UsersAxios";
+import StateStudy from './components/StateStudy';
+import Icons from './components/Icons';
 
 import './App.css'
 
@@ -30,6 +32,8 @@ function App() {
             <Route path="/feedback" element={<Feedback/>} />
             <Route path="/data" element={<Data/>} />
             <Route path="/users-axios" element={<UsersAxios/>} />
+            <Route path="/state-study" element={<StateStudy/>} />
+            <Route path="/icons" element={<Icons/>} /> 
           </Routes>
         </Container>
         <footer className="bg-dark text-white text-center p-3">
