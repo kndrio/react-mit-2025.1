@@ -24,3 +24,6 @@ asset
 *.sln
 *.sw?
 package-lock.json
+
+#Build directory
+build
