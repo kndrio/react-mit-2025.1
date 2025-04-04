@@ -1,3 +1,31 @@
+/* App.css */
+
+/* Tema Light */
+body.light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Tema Dark */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+/* Aplicando as variáveis */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Garantindo que links e outros componentes herdem a cor */
+a,
+.navbar,
+.navbar a,
+.navbar-brand {
+  color: var(--text-color);
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

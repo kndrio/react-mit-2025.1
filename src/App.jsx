@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -17,7 +17,7 @@ import StateStudy from './components/StateStudy';
 import Icons from './components/Icons';
 
 //createContext
-import { ThemeProvider } from "./hooks/ThemeContext";
+import { ThemeProvider, useTheme } from "./hooks/ThemeContext";
 import Tema from "./components/Tema";
 import { CartProvider } from "./hooks/CartContext";
 import Store from './components/Store';
@@ -33,12 +33,29 @@ import PrivateRoute from './components/PrivateRoute'; //Rota protegida
 
 import './App.css'
 
-function App() {
+function App(){
   return (
     <Provider store={store}>
       <ThemeProvider>
         <CartProvider>
           <Router>
+            <AppContent/>
+            </Router>
+        </CartProvider>
+      </ThemeProvider>
+    </Provider>
+  )
+}
+
+function AppContent() {
+
+  const { theme } = useTheme();
+
+  useEffect(() =>{
+      document.body.className = theme;
+  }, [theme])
+
+  return (
             <div className="d-flex flex-column" style={{minHeight: "100vh"}}>
               <Header/>
               <Container className="flex-grow-1">
@@ -51,7 +68,11 @@ function App() {
                   <Route path="/state-study" element={<StateStudy/>} />
                   <Route path="/icons" element={<Icons/>} />
                   <Route path="/store" element={<Store/>} />
-                  <Route path="/store-redux" element={<StoreRedux/>} />
+                  <Route path="/store-redux" element={
+                    <PrivateRoute>
+                      <StoreRedux/>
+                      </PrivateRoute>
+                    } />
                   <Route path="/tema" element={<Tema/>} />
                   <Route path="/login" element={<Login/>} />
                   <Route path="/dashboard" element={
@@ -66,10 +87,6 @@ function App() {
                 INFNET - MIT Full Stack 2025
               </footer>
             </div>
-          </Router>
-        </CartProvider>
-      </ThemeProvider>
-    </Provider>
   );
 }
 
