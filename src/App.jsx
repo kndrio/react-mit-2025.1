@@ -68,11 +68,7 @@ function AppContent() {
                   <Route path="/state-study" element={<StateStudy/>} />
                   <Route path="/icons" element={<Icons/>} />
                   <Route path="/store" element={<Store/>} />
-                  <Route path="/store-redux" element={
-                    <PrivateRoute>
-                      <StoreRedux/>
-                      </PrivateRoute>
-                    } />
+                  <Route path="/store-redux" element={<StoreRedux/>} />
                   <Route path="/tema" element={<Tema/>} />
                   <Route path="/login" element={<Login/>} />
                   <Route path="/dashboard" element={

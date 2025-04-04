@@ -60,13 +60,18 @@ const Header = () => {
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink tag={Link} to="/feedback">
-                        Feedback
+                    <NavLink tag={Link} to="/dashboard">
+                        Dashboard
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink tag={Link} to="/dashboard">
-                        Dashboard
+                    <NavLink tag={Link} to="/store-redux">
+                        Market
+                    </NavLink>
+                </NavItem>                
+                <NavItem>
+                    <NavLink tag={Link} to="/feedback">
+                        Feedback
                     </NavLink>
                 </NavItem>
                 { token && 
